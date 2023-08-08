@@ -5,7 +5,6 @@ import {
   useProducts,
   useProductsDispatch,
 } from "./../../context/ProductsProvider";
-import Select from "react-select";
 
 const modelOptions = [
   { value: "All", label: "All" },
@@ -22,7 +21,6 @@ const Products = () => {
   const { dataItem } = useProducts();
   const searchHandler = (e) => {
     dispatch({ type: "SEARCH_ITEM", event: e });
-
     setSearch(e.target.value);
   };
 
